@@ -9,7 +9,7 @@ function input_help(){
 
 	//This is done for every input element with the "required" attribute.
 	//Grabs the info in the "rel" attribute and adds a span (with the class "hidden"), with the info in.
-	$("input[required]").each(function(){
+	$("input[required], textarea[required]").each(function(){
 		var title = $(this).attr("placeholder");
 		$(this).after("<span class='hidden'> <- "+title+"</span>");
 		console.log(title);

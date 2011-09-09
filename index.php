@@ -42,7 +42,7 @@ if (isset($_GET['status']) && $_GET['status'] == 'loggedout') {
             
             	<div class="post">
                 	<h2 class="post_title"><?php echo $assoc['title']; ?></h2>
-                    <img src="css/img/user.png" /><span class="post_author"><?php echo $assoc['author']; ?></span>
+                    <img src="css/img/user.png" /><a href="mailto:<?php echo $_SESSION['email']; ?>" class="post_author" title="<?php echo $_SESSION['email']; ?>"><?php echo $assoc['author']; ?></a>
                     
                     <div class="post_message">
                     	<p class="post_created"><?php echo $assoc['created']; ?></p>

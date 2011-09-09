@@ -29,30 +29,43 @@ if ($_POST && strlen($_POST['title']) > 0 && strlen($_POST['message']) > 0) {
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>system</title>
-        <!--        <link type="text/css" rel="stylesheet" href="css/main.css" />-->
+        <title>Create post</title>
+       	<script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <link type="text/css" href="css/main.css" rel="stylesheet" media="screen" />
     </head>
     <body>
-        <a href="admin.php">Back</a>
-        <div id="add_post">
-            <form method="post" enctype="multipart/form-data" action="">
-                <h2>Add new post</h2>
-                <p>
-                    <label for="title">Title: </label><br />
-                    <input type="text" name="title" placeholder="Title" autofocus="autofocus" required="required" /><br />
-
-                    <label for="message">Message: </label><br />
-                    <textarea name="message" placeholder="Message..." required="required" rows="8" cols="30"></textarea><br />
-
-                    <label for="userfile">Image: </label><br />
-                    <input type="hidden" name="MAX_FILE_SIZE" value="200000" />
-                    <input name="userfile" type="file" /><br />
-
-                    <input type="submit" id="submit" value="Submit" name="submit" />
-                </p>
-            </form>
-            <?php if (isset($response))
-                echo "<h4 class='alert'>" . $response . "</h4>"; ?>
+        <div id="wrapper">
+    	
+	    	<div id="sidebar_wrapper">
+	       	    <a href="admin.php" title="Back">Back</a>
+	    	</div>
+	    	<div style="clear: left;"></div>
+	    	
+	   		<div id="post_wrapper">
+		   		<div class="post">
+		        	<form method="post" action="" id="create_post_form" enctype="multipart/form-data">
+		            	<h2>Create post</h2>
+		                <p>
+		                    <input type="text" name="title" placeholder="Title" required="required" /><br />
+		                    
+		                    <textarea name="message" placeholder="Message..." required="required" rows="6" cols="35"></textarea><br />
+		
+		                    <input type="hidden" name="MAX_FILE_SIZE" value="200000" />
+                    		<input name="userfile" type="file" /><br />
+							
+							<?php if (isset($response))
+		              			echo "<h4 class='alert'>" . $response . "</h4>"; ?>
+		              			
+		                    <input type="submit" id="submit" value="Create" name="submit" />
+		                </p>
+		       		</form>
+		            <?php if (isset($response))
+		              	echo "<h4 class='alert'>" . $response . "</h4>"; ?>
+		    	</div>
+	    	<!-- #post_wrapper END -->
+        	</div>
+        	<div class="clear"></div>
         </div>
     </body>
 </html>

@@ -29,7 +29,7 @@ if ($_POST && strlen($_POST['username']) > 0 && strlen($_POST['password']) > 0) 
 	   		<div id="post_wrapper">
 		   		<div class="post">
 		        	<form method="post" action="" id="login_form">
-		            	<h2>Login</h2>
+		            	<h2><?php echo($_SESSION['welcome'] ? $_SESSION['welcome'] : "Login"); unset($_SESSION['welcome']);?></h2>
 		                <p>
 		                    <input type="text" name="username" placeholder="Username" required="required" /><br />
 		

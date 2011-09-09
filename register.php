@@ -33,7 +33,7 @@ if ($_POST && strlen($_POST['email']) && strlen($_POST['username']) > 0 && strle
 		                <p>
 		                    <input type="text" name="username" placeholder="Username" required="required" /><br />
 		                    
-		                    <input type="email" name="email" placeholder="E-mail" required="required" /><br />
+		                    <input type="text" name="email" placeholder="E-mail" required="required" /><br />
 		
 		                    <input type="password" name="password" placeholder="Password" required="required" /><br />
 							

@@ -13,7 +13,6 @@ class user_mysql {
     /*
      * function to handle the register SQL queries
      */
-
     public function sql_register($email, $username, $password) {
         $sql = "SELECT * FROM " . USERTABLE . " WHERE username = '$username' OR email = '$email'";
         $result = mysql_query($sql) or die("sql register query failed!<br />" . mysql_error());
@@ -39,7 +38,6 @@ class user_mysql {
     /*
      * function to handle the login SQL queries
      */
-
     public function sql_login($username, $password) {
         $ssha = new ssha();
         $hashed_password = $ssha->hashSSHA($password);
