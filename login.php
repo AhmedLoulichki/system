@@ -31,15 +31,17 @@ if ($_POST && strlen($_POST['username']) > 0 && strlen($_POST['password']) > 0) 
 		        	<form method="post" action="" id="login_form">
 		            	<h2>Login</h2>
 		                <p>
-		                    <input type="text" name="username" placeholder="Username" autofocus="autofocus" required="required" /><br />
+		                    <input type="text" name="username" placeholder="Username" required="required" /><br />
 		
 		                    <input type="password" name="password" placeholder="Password" required="required" /><br />
-		
+							
+							<?php if (isset($response))
+		              			echo "<h4 class='alert'>" . $response . "</h4>"; ?>
+		              			
 		                    <input type="submit" id="submit" value="Login" name="submit" />
 		                </p>
 		       		</form>
-		            <?php if (isset($response))
-		              	echo "<h4 class='alert'>" . $response . "</h4>"; ?>
+		            
 		    	</div>
 	    	<!-- #post_wrapper END -->
         	</div>

@@ -76,14 +76,15 @@ body {
 }
 
 /* LOGIN.php */
-#login_form {
+#login_form, #register_form {
 	font-size: 24pt;
 	
 }
-#login_form h2 {
+#login_form h2, #register_form h2 {
 	margin-bottom: 10px;
+	text-shadow: 1px 1px 1px #ccc;
 }
-#login_form input {
+#login_form input, #register_form input {
 	font-size: 24pt;
 	font-family: Georgia;
 }
@@ -93,4 +94,12 @@ body {
 .alert {
 	font-size: 18pt;
 	color: red;
+	text-shadow: 1px 1px 1px #ccc;
+}
+.hidden {
+	display: none;
+}
+form span {
+	color: #ccc;
+	text-shadow: 1px 1px 1px #555;
 }

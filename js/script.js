@@ -2,11 +2,26 @@ $(document).ready(function(){
 
 	set_post_width();
 	
-	$("input").find().each(function(){
-		var value = $(this).attr("rel");
-		$(this).parent.append(value);
-	});
+	input_help();
 });
+
+function input_help(){
+
+	//This is done for every input element with the "required" attribute.
+	//Grabs the info in the "rel" attribute and adds a span (with the class "hidden"), with the info in.
+	$("input[required]").each(function(){
+		var title = $(this).attr("placeholder");
+		$(this).after("<span class='hidden'> <- "+title+"</span>");
+		console.log(title);
+	//When a input element is focused the class "hidden" is removed and the info inside the element becomes visible.
+	}).focus(function(){
+		$(this).next().removeClass("hidden");
+		console.log(this);
+	//When a input element is no longer focused the class "hidden" is added again and the info inside the element becomes invisible.
+	}).focusout(function(){
+		$(this).next().addClass("hidden");
+	});
+}
 
 function set_post_width(){
 
