@@ -1,3 +1,21 @@
+$(document).ready(function(){
+
+	set_post_width();
+	
+	$("input").find().
+});
+
+function set_post_width(){
+
+	//check the width of the wrapper and the sidebar wrapper.
+	var wrapper = $("#wrapper").outerWidth(true);
+	var sidebar_wrapper = $("#sidebar_wrapper").outerWidth(true);
+	
+	//set the post wrapper width.
+	var width = wrapper - sidebar_wrapper - 50 + "px";
+	$(".post").css("width",width);
+}
+
 //confirm function for deleting posts.
 function delete_post(id){
 	
@@ -17,15 +35,3 @@ function logout(){
 		window.location = "?status=loggedout";
 	}
 }
-
-$(document).ready(function(){
-
-	//check the width of the wrapper and the sidebar wrapper.
-	var wrapper = $("#wrapper").outerWidth(true);
-	var sidebar_wrapper = $("#sidebar_wrapper").outerWidth(true);
-	
-	//set the post wrapper width.
-	var width = wrapper - sidebar_wrapper - 10 + "px";	
-	$("#post_wrapper").css("width",width);
-
-});

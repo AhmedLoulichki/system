@@ -30,7 +30,7 @@ if (isset($_GET['edit_post_id']) && $_SESSION['status'] == 'admin') {
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>system</title>
+        <title>Admin</title>
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
         <link type="text/css" href="css/main.css" rel="stylesheet" media="screen" />

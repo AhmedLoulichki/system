@@ -13,26 +13,36 @@ if ($_POST && strlen($_POST['username']) > 0 && strlen($_POST['password']) > 0) 
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>system</title>
-        <!--        <link type="text/css" rel="stylesheet" href="css/main.css" />-->
+        <title>Login</title>
+       	<script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+        <link type="text/css" href="css/main.css" rel="stylesheet" media="screen" />
     </head>
     <body>
-        <div id="login_form">
-            <form method="post" action="">
-                <h2>Login</h2>
-                <p>
-                    <label for="username">Username: </label><br />
-                    <input type="text" name="username" placeholder="username" autofocus="autofocus" required="required" /><br />
-
-                    <label for="password">Password: </label><br />
-                    <input type="password" name="password" placeholder="password" required="required" /><br />
-
-                    <input type="submit" id="submit" value="Login" name="submit" />
-                </p>
-            </form>
-            <?php if (isset($response))
-                echo "<h4 class='alert'>" . $response . "</h4>"; ?>
-
-            <a href="register.php" title="Register">Register</a>
+    	<div id="wrapper">
+    	
+	    	<div id="sidebar_wrapper">
+	       	    <a href="register.php" title="Register">Register</a>
+	    	</div>
+	    	<div style="clear: left;"></div>
+	    	
+	   		<div id="post_wrapper">
+		   		<div class="post">
+		        	<form method="post" action="" id="login_form">
+		            	<h2>Login</h2>
+		                <p>
+		                    <input type="text" name="username" placeholder="Username" autofocus="autofocus" required="required" /><br />
+		
+		                    <input type="password" name="password" placeholder="Password" required="required" /><br />
+		
+		                    <input type="submit" id="submit" value="Login" name="submit" />
+		                </p>
+		       		</form>
+		            <?php if (isset($response))
+		              	echo "<h4 class='alert'>" . $response . "</h4>"; ?>
+		    	</div>
+	    	<!-- #post_wrapper END -->
+        	</div>
+        	<div class="clear"></div>
         </div>
     </body>

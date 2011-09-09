@@ -25,12 +25,10 @@ if (isset($_GET['status']) && $_GET['status'] == 'loggedout') {
     </head>
     <body>
     	<ul>
-    		<li>Byt ut alla namn på variabler, funktioner, klasser m.m från "message" till "post".
-Eftersom "message" egentligen pekar på den delen i varje inlägg som innehåller meddelandet.
-"post" är översättningen av inlägg till engelska.</li>
-			<li>Sätta in:<br />
-			header("content-type:text/html; charset=utf-8");<br />
-			i alla sidor högst upp. Redan implementerat på admin.php! Checka!</li>
+    		<li>En funktion som för alla text input fält tar det som står i rel attributet och lägger till ett span till höger om inputfältet.
+    		Sätt alla input fält in i en div eller p och sedan skicka in texten från rel attributet i den div eller p.
+    		Har börjat i script.js
+    		Gör en generell funktion som fungerar för alla utan konfig för varje enskild.</li>
     	</ul>
     </body>
 </html>

@@ -13,9 +13,9 @@ tfoot, thead, tr, th, td {
 }
 
 .clear {clear: both;}
-a {text-decoration: none;}
+a {font-size: 10pt; text-decoration: none; color: navy;}
 a:hover {text-decoration: underline;}
-a:visited {color: blue;}
+a:visited {color: navy;}
 
 body {
 	background: #ccc;
@@ -43,17 +43,14 @@ body {
 	color: #333;
 	background: #F0F0F0;
 }
-#sidebar_wrapper a {font-size: 10pt;}
 
-#login_form {
-    margin: 0 auto;
-    width: 300px;
-}
 #post_wrapper {
 	float: left;
 	/* the width is dynamically set with jQuery in script.js */
+	width: auto;
 }
 .post {
+	/* the width is dynamically set with jQuery in script.js */
 	width: auto;
 	margin: 10px;
 	padding: 10px;
@@ -62,9 +59,6 @@ body {
 	background: #F0F0F0;
 }
 .post_links {text-align: right;}
-.post a {
-	font-size: 10pt;
-}
 .post_title {
 	font-size: 15pt;
 	font-weight: bold;
@@ -79,4 +73,24 @@ body {
 }
 .post_created {
 	font-size: 8pt;
+}
+
+/* LOGIN.php */
+#login_form {
+	font-size: 24pt;
+	
+}
+#login_form h2 {
+	margin-bottom: 10px;
+}
+#login_form input {
+	font-size: 24pt;
+	font-family: Georgia;
+}
+#submit {
+	width: 150px;
+}
+.alert {
+	font-size: 18pt;
+	color: red;
 }
