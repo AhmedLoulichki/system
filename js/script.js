@@ -2,7 +2,10 @@ $(document).ready(function(){
 
 	set_post_width();
 	
-	$("input").find().
+	$("input").find().each(function(){
+		var value = $(this).attr("rel");
+		$(this).parent.append(value);
+	});
 });
 
 function set_post_width(){
