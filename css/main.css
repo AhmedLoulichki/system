@@ -51,7 +51,6 @@ body {
 }
 .post {
 	/* the width is dynamically set with jQuery in script.js */
-	width: auto;
 	margin: 10px;
 	padding: 10px;
 	border-radius: 10px;
