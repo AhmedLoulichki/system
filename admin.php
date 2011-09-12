@@ -41,6 +41,7 @@ if (isset($_GET['edit_post_id']) && $_SESSION['status'] == 'admin') {
     	<div id="sidebar_wrapper">
     		<a href=add_post.php>Add new post</a><br />
     		<a href="todo.php">TODO</a><br />
+    		<a href="test/">Testmiljö</a><br />
 	        <a href="#" onclick="logout()">Logout</a>
     	</div>
     	<div style="clear: left;"></div>
