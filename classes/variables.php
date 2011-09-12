@@ -7,4 +7,5 @@ define('DBNAME', 'system');
 
 define('USERTABLE', 'users');
 define('POSTTABLE', 'posts');
+define('IMAGETABLE', 'upload');
 ?>

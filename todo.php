@@ -27,10 +27,7 @@ if (isset($_GET['status']) && $_GET['status'] == 'loggedout') {
     <body>
     	<ul>
     		<li>Funktion som gör så att den markerar de input fält som inte är ifyllda med en röd ram.</li>
-    		<li>Måste ha en till kolumn i post table för att kunna skriva vilket id bilden som hör till det inlägget har.<br />
-    		Sen får jag göra en php sida som bara visar EN bild genom att man skickar in ett id till den.<br />
-    		Ungefär som album nu gör bara att den ska hämta bilden genom att få ett id med GET antar jag.<br />
-    		Kolla på <a target="_blank" href='http://raynux.com/blog/2008/11/20/store-and-display-image-from-mysql-database/'>detta!</a> Speciellt på filen han kallar image.php</li>
+    		<li>Få delete post att fungera med bilder!</li>
     	</ul>
     </body>
 </html>

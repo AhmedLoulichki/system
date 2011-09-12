@@ -16,13 +16,13 @@ if (isset($_GET['status']) && $_GET['status'] == 'loggedout') {
 }
 
 if ($_POST && strlen($_POST['title']) > 0 && strlen($_POST['message']) > 0) {
-    if ($_FILES['userfile']['size'] > 0) {
-        //TODO Here we send the file into the "add_post" function too.
-        // Still have to make this work in the class.
-        $response = $post->add_post($_POST['title'], $_POST['message'], $_SESSION['username'], $_POST['userfile']);
+    if($_FILES['userfile']) {
+    	$response = $post->add_post($_POST['title'], $_POST['message'], $_SESSION['username'], $_POST['userfile']);
+    	
+    	if(!$response){
+	  		header("location: admin.php");
+		}
     }
-    $response = $post->add_post($_POST['title'], $_POST['message'], $_SESSION['username']);
-    header("location: admin.php");
 }
 ?>
 <!DOCTYPE html>
@@ -51,7 +51,7 @@ if ($_POST && strlen($_POST['title']) > 0 && strlen($_POST['message']) > 0) {
 		                    
 		                    <textarea name="message" placeholder="Message..." required="required" rows="6" cols="35"></textarea><br />
 		
-		                    <input type="hidden" name="MAX_FILE_SIZE" value="200000" />
+		                    <input type="hidden" name="MAX_FILE_SIZE" value="500000" />
                     		<input name="userfile" type="file" /><br />
 							
 							<?php if (isset($response))
@@ -60,8 +60,6 @@ if ($_POST && strlen($_POST['title']) > 0 && strlen($_POST['message']) > 0) {
 		                    <input type="submit" id="submit" value="Create" name="submit" />
 		                </p>
 		       		</form>
-		            <?php if (isset($response))
-		              	echo "<h4 class='alert'>" . $response . "</h4>"; ?>
 		    	</div>
 	    	<!-- #post_wrapper END -->
         	</div>

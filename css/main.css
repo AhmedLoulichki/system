@@ -57,6 +57,7 @@ body {
 	color: #333;
 	background: #F0F0F0;
 }
+.post img {margin-top: 5px;}
 .post_links {text-align: right;}
 .post_title {
 	font-size: 15pt;

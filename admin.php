@@ -38,7 +38,7 @@ if (isset($_GET['edit_post_id']) && $_SESSION['status'] == 'admin') {
     <body>
     	<div id="wrapper">
     	
-    	<div id="sidebar_wrapper">
+		<div id="sidebar_wrapper">
     		<a href=add_post.php>Add new post</a><br />
     		<a href="todo.php">TODO</a><br />
     		<a href="test/">Testmiljö</a><br />
@@ -56,12 +56,17 @@ if (isset($_GET['edit_post_id']) && $_SESSION['status'] == 'admin') {
                     <img src="css/img/user.png" /><span class="post_author"><?php echo $assoc['author']; ?></span>
                     
                     <div class="post_message">
-                    	<p class="post_created"><?php echo $assoc['created']; ?></p>
+                    	<p class="post_created"><?php echo $assoc['created']; ?></p>                    	
                     	<p><?php echo nl2br($assoc['message']); ?></p>
+                    	
+                    	<?php if($imageID = $assoc['imageID'] != 0)
+                    		echo "<a target='_blank' href='test/image.php?id=$imageID'>
+                    				<img style='max-width: 100px; max-height: 70px;' src='test/image.php?id=$imageID'/>
+                    			  </a>"; ?>
                     </div>
                     
                     <p class="post_links"><a href="edit_post.php?id=<?php echo $assoc['id']; ?>">Edit post</a> -
-                    <a href="#" onclick="delete_post(<?php echo $assoc['id']; ?>)">Delete post</a></p>
+                    <a href="#" onclick="delete_post(<?php echo $assoc['id'] ?>)">Delete post</a></p>
                 </div>                
 	  <?php endwhile;
         endif; ?>
