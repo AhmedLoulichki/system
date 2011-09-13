@@ -27,7 +27,9 @@ if (isset($_GET['status']) && $_GET['status'] == 'loggedout') {
     <body>
     	<ul>
     		<li>Funktion som gör så att den markerar de input fält som inte är ifyllda med en röd ram.</li>
-    		<li>Få delete post att fungera med bilder!</li>
+    		<li>Få delete post att fungera med bilder!
+    			Har en sql query skriven som jag tycker borde fungera utmärkt men jag får syntax error! :/</li>
+    		<li>Skapa en post med en bild fungerar inte då den får tillbaka fel imageID från mysql_insert_id i post_mysql.php</li>
     	</ul>
     </body>
 </html>

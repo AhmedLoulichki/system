@@ -29,6 +29,8 @@ class post_mysql {
 		    $fileSize = $_FILES['userfile']['size'];
 		    $fileType = $_FILES['userfile']['type'];
 		    $error = $_FILES['userfile']['error'];
+		    
+		    $fileName = mysql_real_escape_string($fileName);
 		
 			if($error){
 				return "Error while uploading file. Please try again.";
@@ -39,7 +41,7 @@ class post_mysql {
 		    }
 		    
 		    if(filesize($tmpName) > 500000){
-		    	return "Filesize must be less than 500 K";
+		    	return "Filesize must be less than 500 KiB";
 		    }
 		    
 		    $content = file_get_contents($tmpName);
